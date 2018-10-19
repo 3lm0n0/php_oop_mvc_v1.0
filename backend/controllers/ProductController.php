@@ -25,18 +25,39 @@ class ProductController
   }
 
   // create products
-  public function create(_post[])
+  public static function create($POST)
   {
-    $newProduct = new Product;
+    //
+    $newProduct = new Product($POST['code'],$POST['category'],$POST['name'],$POST['quantity'],$POST['price']);
+    //
+    $code = $newProduct->getCode();
+    $category = $newProduct->getCategory();
+    $name = $newProduct->getName();
+    $quantity = $newProduct->getQuantity();
+    $price = $newProduct->getPrice();
 
-    $newProduct->code = $code;
-    $newProduct->category = $category;
-    $newProduct->name = $name;
-    $newProduct->quantity = $quantity;
-    $newProduct->price = $price;
+    // instantiate database and product object
+    $database = new Database();
+    $tableName = $database->DB_TABLE_PROUDCTS;
+    $db = $database->db;
+        // armo la query
+        $query = "INSERT INTO"
+                    .$tableName."(code,category,name,quantity,price)
+                  VALUES
+                    (".$code.",'".$category."','".$name."',".$quantity.",".$price.")";
 
-    $newProduct->save();
-
+        // prepare query statement
+        $stmt = $db->prepare($query);
+        // execute query
+        $stmt->execute();
+        //
+        if ($stmt === TRUE) {
+            echo "<br> El producto fue creado exitosamente! <br>";
+        } else {
+            echo "<br> Error: " . $query . "<br>";
+        }
+        // return "El producto fue creado exitosamente!";
+        // return print_r($stmt);
   }
 
 }

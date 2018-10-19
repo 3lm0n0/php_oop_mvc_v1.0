@@ -1,10 +1,13 @@
 <?php
-class Producto
+class Product
 {
+    private $code;
+    private $category;
     private $name;
+    private $quantity;
     private $price;
 
-    public function __construct(String $name, Float $price)
+    public function __construct( $code,  $category,  $name,  $quantity,  $price)
     {
         $this->code = $code;
         $this->category = $category;
@@ -13,16 +16,16 @@ class Producto
         $this->price = $price;
     }
 
-    public function getCode(): String
+    public function getCode()
     {
         return $this->code;
     }
-    public function setCode(String $code)
+    public function setCode(integer $code)
     {
         $this->code = $code;
     }
 
-    public function getCategory(): String
+    public function getCategory()
     {
         return $this->category;
     }
@@ -31,7 +34,7 @@ class Producto
         $this->category = $category;
     }
 
-    public function getName(): String
+    public function getName()
     {
         return $this->name;
     }
@@ -40,16 +43,16 @@ class Producto
         $this->name = $name;
     }
 
-    public function getQuantity(): String
+    public function getQuantity()
     {
         return $this->quantity;
     }
-    public function setQuantity(String $quantity)
+    public function setQuantity(integer $quantity)
     {
         $this->quantity = $quantity;
     }
 
-    public function getPrice(): Float
+    public function getPrice()
     {
         return $this->price;
     }

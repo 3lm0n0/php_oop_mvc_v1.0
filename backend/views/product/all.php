@@ -40,9 +40,10 @@
            <div id="price_errors" class="errors"></div>
          </div>
          <div class="container center">
-           <input type="button" id="insert" value="Insertar" onclick="insertProduct();"/>
-           <input type="button" id="delete" value="Eliminar" onclick="deleteProduct();"/>
-           <input type="button" id="modify" value="Editar" onclick="editProduct();"/>
+           <!-- <input type="button" id="insert" value="Insertar" onclick="newProduct();"/> -->
+           <button type="button" name="button" id="insert" value="Insertar" onclick="newProduct();">Insertar</button>
+           <button type="button" name="button" id="delete" value="Eliminar" onclick="deleteProduct();">Eliminar</button>
+           <button type="button" name="button" id="modify" value="Editar" onclick="editProduct();">Editar</button>
          </div>
        </form>
      </div>
@@ -51,7 +52,8 @@
        <div class="container center">
          <div class="title toleft">
              <h1>Stock</h1>
-             <input type="button" id="all" value="Ver Stock" onclick="allProducts();"/>
+             <!-- <input type="button" id="all" value="Ver Stock" onclick="allProducts();"/> -->
+             <button type="button" name="button" id="all" value="Ver Stock" onclick="allProducts();">Ver Stock</button>
          </div>
          <div class="container">
              <table class="table" id="tablajson">
@@ -63,7 +65,7 @@
  </body>
  <script src="../../../frontend/js/ajax.js"></script>
  <script src="../../../frontend/js/product/validate.js"></script>
- <script src="../../../frontend/js/product/insert_product.js"></script>
+ <script src="../../../frontend/js/product/new_product.js"></script>
  <script src="../../../frontend/js/product/all_products.js"></script>
  <script src="../../../frontend/js/product/delete_product.js"></script>
  <script src="../../../frontend/js/product/edit_product.js"></script>
