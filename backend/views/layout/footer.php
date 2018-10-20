@@ -1,3 +1,3 @@
-<footer class="contenedor footer">
-    Software Development - <?php echo date("Y"); ?>
+<footer class="footer">
+    Aprendemos y nos divertimos! - <?php echo date("Y"); ?>
 </footer>

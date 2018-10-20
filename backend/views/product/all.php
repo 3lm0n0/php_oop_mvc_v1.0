@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
 <html>
  <head>
+   <title>Productos</title>
+   <link href="../../../frontend/css/header.css" rel="stylesheet" type="text/css">
    <link href="../../../frontend/css/product/product.css" rel="stylesheet" type="text/css">
+   <link href="../../../frontend/css/footer.css" rel="stylesheet" type="text/css">
  </head>
  <body>
-   <section>
-     <a href="../../../index.php"> Home </a>
-   </section>
+   <?php require_once("../../views/layout/header.php"); ?>
    <section>
      <div class="container container-title">
        <h2>Productos</h2>
@@ -41,9 +42,9 @@
          </div>
          <div class="container center">
            <!-- <input type="button" id="insert" value="Insertar" onclick="newProduct();"/> -->
-           <button type="button" name="button" id="insert" value="Insertar" onclick="newProduct();">Insertar</button>
-           <button type="button" name="button" id="delete" value="Eliminar" onclick="deleteProduct();">Eliminar</button>
-           <button type="button" name="button" id="modify" value="Editar" onclick="editProduct();">Editar</button>
+           <button class="button-new" type="button" name="button" id="new" value="Insertar" onclick="newProduct();">Insertar</button>
+           <button class="button-delete" type="button" name="button" id="delete" value="Eliminar" onclick="deleteProduct();">Eliminar</button>
+           <button class="button-edit" type="button" name="button" id="modify" value="Editar" onclick="editProduct();">Editar</button>
          </div>
        </form>
      </div>
@@ -53,7 +54,7 @@
          <div class="title toleft">
              <h1>Stock</h1>
              <!-- <input type="button" id="all" value="Ver Stock" onclick="allProducts();"/> -->
-             <button type="button" name="button" id="all" value="Ver Stock" onclick="allProducts();">Ver Stock</button>
+             <button class="button-stock" type="button" name="button" id="all" value="Ver Stock" onclick="allProducts();">Ver Stock</button>
          </div>
          <div class="container">
              <table class="table" id="tablajson">
@@ -62,6 +63,7 @@
          </div>
        </div>
    </section>
+   <?php require_once("../../views/layout/footer.php"); ?>
  </body>
  <script src="../../../frontend/js/ajax.js"></script>
  <script src="../../../frontend/js/product/validate.js"></script>

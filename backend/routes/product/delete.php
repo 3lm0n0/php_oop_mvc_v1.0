@@ -1,4 +1,5 @@
 <?php
+
   $product = $_POST['name'];
 
   // back-end check product content
@@ -7,8 +8,9 @@
   } else {
       // initialize object
       include_once '../../controllers/ProductController.php';
-      $response = ProductController::create($_POST);
+      $response = ProductController::delete($_POST);
   }
 
   echo "<br>".$response."<br>";
+
 ?>

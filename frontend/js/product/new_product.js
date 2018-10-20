@@ -17,5 +17,6 @@ console.log(params);
           console.log(this);
       };
   };
-
+  // muestro todos los productos luego de hacer la edicion.
+  allProducts();
 }
