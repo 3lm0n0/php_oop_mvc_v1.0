@@ -7,8 +7,7 @@ body {
   font-size: 16px;
   vertical-align: middle;
   background: #24b9ab;
-  /* background-image: linear-gradient(to right, #009688, #21b0f3); */
-
+  overflow-x: hidden;
 }
 
 .container {
@@ -57,20 +56,18 @@ button {
   cursor: pointer;
 }
 button:hover {
+  background-color: #2b2828;
+  color: #fff;
 }
-.button-new:hover {
+.button-new {
   background-color: #0dd215;
 }
-.button-delete:hover {
+.button-delete {
   background-color: #e91e63;
   color: #fff;
 }
-.button-edit:hover {
+.button-edit {
   background-color: #ffeb3b;
-}
-.button-stock:hover {
-  background-color: #2b2828;
-  color: #fff;
 }
 
 input {
